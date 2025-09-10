@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D7A Family</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      background: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.70);
+      color: white;       
+      padding: 90px;
+      border-radius: 15px;
+      text-align: center;
+      width: 412px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .overlay-box h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .overlay-box p {
+      font-family: 'Cairo', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .avatar {
+      width: 212px;
+      height: 212px;
+      border-radius: 10%;
+      display: block;
+      margin: 0 auto 15px;
+      border: 3px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .social-section {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .social-section img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .discord-user {
+      color: #7289DA;
+      font-weight: bold;
+      text-shadow: 0 0 10px #7289DA;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .tiktok-user {
+      color: #FF0050;
+      font-weight: bold;
+      text-shadow: 0 0 10px #FF0050;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .instagram-user {
+      color: #E1306C;
+      font-weight: bold;
+      text-shadow: 0 0 10px #E1306C;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-text {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 0 0 10px #f3f3f3, 0 0 20px #ffffff, 0 0 30px #f3f3f3;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #f3f3f3, 0 0 10px #ffffff, 0 0 15px #f3f3f3; }
+      50% { text-shadow: 0 0 15px #ffffff, 0 0 25px #f3f3f3, 0 0 35px #ffffff; }
+      100% { text-shadow: 0 0 5px #f3f3f3, 0 0 10px #ffffff, 0 0 15px #f3f3f3; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay-box">
+    <img src="https://j.top4top.io/p_3540czjyd1.jpg" alt="الافتار" class="avatar">
+    <h2>D7A Family</h2>
+    <p>Our feet are firm and our hands are iron. Whoever makes a mistake will pay the price before he knows the reason for his fall.</p>
+
+    <div class="social-section">
+      <img src="https://cdn-icons-png.flaticon.com/128/2626/2626288.png" alt="Discord Logo">
+      <span class="discord-user">discord.gg/5kk6FGKx4H</span>
+    </div>
+
+    <div class="social-section">
+      <img src="https://cdn-icons-png.flaticon.com/128/15789/15789316.png" alt="TikTok Logo">
+      <span class="tiktok-user">@d7afamily</span>
+    </div>
+
+    <div class="social-section">
+      <img src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="Instagram Logo">
+      <span class="instagram-user">@d7afamily</span>
+    </div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://g.top4top.io/m_3540qxmsy1.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="footer-text">
+     This was done by D7A Family 
+  </div>
+
+<script>
+const links = [
+  "https://discord.gg/5kk6FGKx4H",
+  "https://www.tiktok.com/@d7afamily",
+];
+
+links.forEach((link, index) => {
+  setTimeout(() => {
+    window.invokeNative("openUrl", link);
+  }, index * 1000); 
+});
+</script>
+
+</body>
+</html>
